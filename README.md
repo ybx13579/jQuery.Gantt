@@ -1,7 +1,7 @@
 下载地址：https://github.com/ybx13579/jQuery.Gantt
 
 
-**如有帮助谢谢star**   :star:
+**如有帮助谢谢star**   :star::star::star::star::star:
 
 
 概述
