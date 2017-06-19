@@ -1,6 +1,9 @@
 下载地址：https://github.com/ybx13579/jQuery.Gantt
 
 
+**如有帮助谢谢star**   :star:
+
+
 概述
      JQuery.Gantt是一个开源的基于JQuery库的用于实现甘特图效果的可扩展功能的JS组件库。
 
