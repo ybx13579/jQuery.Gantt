@@ -1,0 +1,190 @@
+﻿
+<!doctype html>
+<html lang="en-au">
+<head>
+    <title>jQuery.Gantt</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/prettify.css" />
+    <style type="text/css">
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 13px;
+            padding: 0 0 50px 0;
+        }
+
+        .contain {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin: 40px 0 20px 0;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #DDD;
+            margin-top: 50px;
+            margin-bottom: 25px;
+        }
+
+        table th:first-child {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gantt"></div>
+
+</body>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.fn.gantt.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/prettify.js"></script>
+<script>
+
+		$(function() {
+
+			"use strict";
+
+			$(".gantt").gantt({
+			    source: [
+
+                    {
+                        name: "task  1",
+                        desc: "描述",
+                        values: [{
+                            from: "/Date(1320192000000)/",
+                            to: "/Date(1322401600000)/",
+                            label: "",
+                            customClass: "ganttRed"
+                        }]
+                    }, {
+                        name: "task  2",
+                        desc: "",
+                        values: [{
+                            from: "/Date(1322611200000)/",
+                            to: "/Date(1323302400000)/",
+                            label: "",
+                            customClass: "ganttRed"
+                        }]
+                    }, {
+                        name: "task  3",
+                        desc: "",
+                        values: [{
+                            from: "/Date(1323802400000)/",
+                            to: "/Date(1325685200000)/",
+                            label: "",
+                            customClass: "ganttGreen"
+                        }]
+                    }, {
+                        name: "task  4",
+                        desc: "",
+                        values: [{
+                            from: "/Date(1325685200000)/",
+                            to: "/Date(1325695200000)/",
+                            label: "",
+                            customClass: "ganttBlue"
+                        }]
+                    }, {
+                        name: "task  5",
+                        desc: "",
+                        values: [{
+                            from: "/Date(1326785200000)/",
+                            to: "/Date(1325785200000)/",
+                            label: "",
+                            customClass: "ganttGreen"
+                        }]
+                    }, {
+                        name: "task  6",
+                        desc: "",
+                        values: [{
+                            from: "/Date(1328785200000)/",
+                            to: "/Date(1328905200000)/",
+                            label: "",
+                            customClass: "ganttBlue"
+                        }]
+                    }, {
+                        name: "task  7",
+                        desc: "",
+                        values: [{
+                            from: "/Date(1330011200000)/",
+                            to: "/Date(1336611200000)/",
+                            label: "",
+                            customClass: "ganttOrange"
+                        }]
+                    }, {
+                        name: "task  8",
+                        desc: "",
+                        values: [{
+                            from: "/Date(1336611200000)/",
+                            to: "/Date(1338711200000)/",
+                            label: "",
+                            customClass: "ganttOrange"
+                        }]
+                    },
+
+                    {
+					name: "more",
+					desc: "",
+					values: [
+                    {
+                        from: "/Date(1322611200000)/",
+                        to: "/Date(1323302400000)/",
+					    label: "",
+					    customClass: "ganttBlue"
+                    },
+                    {
+                        from: "/Date(1323802400000)/",
+                        to: "/Date(1325685200000)/",
+                        label: "",
+                        customClass: "ganttOrange"
+                    },
+                    {
+                        from: "/Date(1328785200000)/",
+                        to: "/Date(1328905200000)/",
+                        label: "",
+                        customClass: "ganttGreen"
+                    },
+
+
+					    
+					]
+				}],
+				navigate: 'scroll',
+				scale: "weeks",// months days  weeks
+				maxScale: "months",
+				minScale: "days",
+				itemsPerPage: 10,
+				//onItemClick: function(data) {
+				//	alert("Item clicked - show some details");
+				//},
+				onAddClick: function(dt, rowId) {
+					//alert("Empty space clicked - add an item!");
+				},
+				onRender: function() {
+					if (window.console && typeof console.log === "function") {
+						console.log("chart rendered");
+					}
+				}
+			});
+
+			$(".gantt").popover({
+				selector: ".bar",
+				title: "I'm a popover",
+				content: "And I'm the content of said popover."
+			});
+
+			prettyPrint();
+
+		});
+
+</script>
+
+</html>
