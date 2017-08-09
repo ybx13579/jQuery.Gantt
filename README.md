@@ -1,3 +1,6 @@
+# 甘特图
+## jQuery.Gantt
+ 
 下载地址：https://github.com/ybx13579/jQuery.Gantt
 
 
