@@ -1,5 +1,5 @@
 # 甘特图
-jQuery.Gantt
+## jQuery.Gantt
  
 **如有帮助谢谢star**   :star::star::star::star::star:
 
