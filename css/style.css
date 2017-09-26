@@ -235,7 +235,7 @@
     width: 100%;
 }
 .fn-gantt .navigate {
-    display:none;
+    /*display:none;*/
     border-top: 1px solid #DDD;
     padding: 10px 0 10px 225px;
 }
