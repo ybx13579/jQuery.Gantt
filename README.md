@@ -28,7 +28,6 @@
 ```
 <script src="js/jquery-1.7.min.js"></script>
 <script src="js/jquery.fn.gantt.js" charset ="GB2312"></script>
-<script src="js/jquery.cookie.js"></script>
 ```
 
 **注：如果需要甘特图中显示中文，则需要在js文件引用中加上charset特性并设置为GB2312，否则中文内容将显示为乱码。**
