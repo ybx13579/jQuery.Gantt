@@ -8,7 +8,7 @@
  
  - 下载地址：https://github.com/ybx13579/jQuery.Gantt
  - 整理部分指南：http://blog.csdn.net/yangbingx/article/details/73470030
- - 网址：http://taitems.github.io/jQuery.Gantt
+ - 官网：http://taitems.github.io/jQuery.Gantt
 
 
  
