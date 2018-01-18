@@ -8,11 +8,13 @@
  
  - 下载地址：https://github.com/ybx13579/jQuery.Gantt
  - 整理部分指南：http://blog.csdn.net/yangbingx/article/details/73470030
- - 网址：http://taitems.github.io/jQuery.Gantt/
- 
- 
- 
- 
+ - 网址：http://taitems.github.io/jQuery.Gantt
+
+
+
+
+
+
  
  - 概述：JQuery.Gantt是一个开源的基于JQuery库的用于实现甘特图效果的可扩展功能的JS组件库。
  - 缺点：目前用到的只是直接后台取数据渲染，图内不可拖动更改  
