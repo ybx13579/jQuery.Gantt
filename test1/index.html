@@ -1,13 +1,12 @@
-﻿
-<!doctype html>
-<html lang="en-au">
+﻿<!doctype html>
+<html lang="en">
 <head>
     <title>jQuery.Gantt</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/prettify.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="css/prettify.min.css" rel="stylesheet" />
     <style type="text/css">
         body {
             font-family: Helvetica, Arial, sans-serif;
@@ -20,21 +19,6 @@
             margin: 0 auto;
         }
 
-        h1 {
-            margin: 40px 0 20px 0;
-        }
-
-        h2 {
-            font-size: 1.5em;
-            padding-bottom: 3px;
-            border-bottom: 1px solid #DDD;
-            margin-top: 50px;
-            margin-bottom: 25px;
-        }
-
-        table th:first-child {
-            width: 150px;
-        }
     </style>
 </head>
 <body>
@@ -45,17 +29,18 @@
 
 </body>
 </html>
-<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.fn.gantt.js"></script>
-<!--<script src="js/bootstrap-tooltip.js"></script>-->
-<!--<script src="js/bootstrap-popover.js"></script>-->
-<!--<script src="js/prettify.js"></script>-->
+
+<script src="js/prettify.min.js"></script>
 <script>
 
     $(function () {
 
         "use strict";
 
+        //初始化gantt
         $(".gantt").gantt({
             source: [
 
@@ -64,7 +49,7 @@
                     desc: "",
                     values: [{
                         from: "/Date(1320192000000)/",
-                        to: "/Date(1322401600000)/",
+                          to: "/Date(1320592000000)/",
                         label: "",
                         customClass: "ganttRed"
                     }]
@@ -156,8 +141,6 @@
                         customClass: "ganttGreen"
                     },
 
-
-
                     ]
                 }],
             navigate: 'scroll',//buttons  scroll
@@ -166,10 +149,10 @@
             minScale: "days",
             itemsPerPage: 10,
             onItemClick: function (data) {
-                //alert("Item clicked - show some details");
+                alert("Item clicked - show some details");
             },
             onAddClick: function (dt, rowId) {
-                //alert("Empty space clicked - add an item!");
+                alert("Empty space clicked - add an item!");
             },
             onRender: function () {
                 if (window.console && typeof console.log === "function") {
@@ -178,6 +161,20 @@
             }
         });
 
+
+
+        //弹窗功能
+        $(".gantt").popover({
+            selector: ".bar",
+            title: "I'm a popover",
+            content: "And I'm the content of said popover.",
+            trigger: "hover",
+            placement: "auto right"
+        });
+
+
+        //prettyPrint();
     });
+
 
 </script>
